@@ -23,7 +23,7 @@ const HelloWorldSceneAR = () => {
       {visible && (
         <ViroVideo
           source={require("./assets/sabrina.mp4")} // put sabrina.mp4 inside your project’s ./assets folder
-          position={[0, -1, -4]} // 3 meters in front of the camera
+          position={[0, -1, -4]} // 4 meters in front of the camera
           width={2} // 2 meters wide
           height={1.2} // keep aspect ratio
           loop={true} // loop video
