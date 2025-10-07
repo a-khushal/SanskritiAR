@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "616061704551",
+    "project_id": "sanskritiar-8ca9a",
+    "storage_bucket": "sanskritiar-8ca9a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616061704551:android:b48e1762c12d51fd7ab7c2",
+        "android_client_info": {
+          "package_name": "com.SanskritiAR"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616061704551-a91uciacvl8qan83utjdtpbo5risiqi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrrKtiyFk9CqdSCUXGFkK8UpeizYVAZoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616061704551-a91uciacvl8qan83utjdtpbo5risiqi1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

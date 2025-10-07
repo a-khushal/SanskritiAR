@@ -4,6 +4,7 @@ import {
   ViroVideo,
   ViroTrackingReason,
   ViroTrackingStateConstants,
+  ViroImage,
 } from "@reactvision/react-viro";
 import React, { useState } from "react";
 import { StyleSheet } from "react-native";
@@ -19,19 +20,16 @@ const HelloWorldSceneAR = () => {
   }
 
   return (
-    <ViroARScene onTrackingUpdated={onInitialized}>
-      {visible && (
-        <ViroVideo
-          source={require("./assets/sabrina.mp4")} // put sabrina.mp4 inside your project’s ./assets folder
-          position={[0, -1, -4]} // 4 meters in front of the camera
-          width={2} // 2 meters wide
-          height={1.2} // keep aspect ratio
-          loop={true} // loop video
-          muted={false} // play with sound
-          transformBehaviors={["billboardY"]}
-        />
-      )}
+    <ViroARScene>
+      <ViroImage
+        source={require("./assets/interstellar.webp")} // put interstellar.webp inside ./assets
+        position={[0, -1, -4]} // 4 meters in front of the camera
+        width={2} // width of the image
+        height={1.2} // height of the image
+        transformBehaviors={["billboardY"]} // always faces user horizontally
+      />
     </ViroARScene>
+
   );
 };
 
