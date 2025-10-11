@@ -3,7 +3,6 @@ import { SafeAreaView } from "react-native";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import LoginScreen from "./screens/Login";
 import { ClientId } from "@env";
-//import { Navigation } from "./navigation/StackNavigator";
 
 export default () => {
   useEffect(() => {
@@ -16,6 +15,5 @@ export default () => {
     <SafeAreaView style={{ flex: 1 }}>
       <LoginScreen />
     </SafeAreaView>
-    // <Navigation />
   );
 };

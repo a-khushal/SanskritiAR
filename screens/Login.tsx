@@ -10,14 +10,13 @@ import {
 } from "react-native";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { signOut } from "@react-native-firebase/auth";
-//import { useNavigation } from "@react-navigation/native";
 //import HomeScreen from "./HomeScreen";
 import {
   GoogleAuthProvider,
   getAuth,
   signInWithCredential,
 } from "@react-native-firebase/auth";
-// Facebook and Apple icons URLs (you can replace with local assets too)
+
 const facebookIcon =
   "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png";
 const appleIcon =
@@ -32,7 +31,7 @@ const LoginScreen = () => {
     text: isDarkMode ? "#fff" : "#000",
     buttonBackground: isDarkMode ? "#1f1f1f" : "#f5f5f5",
     border: isDarkMode ? "#444" : "#ccc",
-    oauthText: isDarkMode ? "#fff" : "#fff", // oauth buttons mostly white text
+    oauthText: isDarkMode ? "#fff" : "#fff",
   };
 
   const handleGoogleLogin = async () => {
@@ -42,23 +41,23 @@ const LoginScreen = () => {
       });
 
       const signInResult = await GoogleSignin.signIn();
-      console.log("signin is ", signInResult);
+      // console.log("signin is ", signInResult);
       const idToken = signInResult.data?.idToken;
-      console.log("Token is ", idToken);
+      //console.log("Token is ", idToken);
       if (!idToken) {
         throw new Error("No ID token found");
       }
       const googleCreds = GoogleAuthProvider.credential(
         signInResult.data?.idToken
       );
-      // should be resolved in the firebase console
-      console.log("Google creds:", googleCreds);
+
+      //console.log("Google creds:", googleCreds);
       const userCreds = await signInWithCredential(getAuth(), googleCreds);
-      console.log("User creds ", userCreds);
-      console.log("User is ", getAuth().currentUser);
+      //console.log("User creds ", userCreds);
+      //console.log("User is ", getAuth().currentUser);
       setTimeout(async () => {
         await signOut(getAuth());
-        console.log("User is ", getAuth().currentUser);
+        // console.log("User is ", getAuth().currentUser);
       }, 5000);
     } catch (error: any) {
       console.error("Google Sign-In error:", error);
@@ -66,23 +65,12 @@ const LoginScreen = () => {
     }
   };
 
-  // Placeholder for Facebook login logic
-  const handleFacebookLogin = () => {
-    Alert.alert("Facebook Sign-In", "Facebook login not implemented yet.");
-  };
-
-  // Placeholder for Apple login logic
-  const handleAppleLogin = () => {
-    Alert.alert("Apple Sign-In", "Apple login not implemented yet.");
-  };
-
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
       <Text style={[styles.title, { color: theme.text }]}>
-        Welcome to MyApp
+        Welcome to SanskritiAR
       </Text>
 
-      {/* Google Sign-In */}
       <Pressable
         style={[
           styles.googleButton,
@@ -100,49 +88,6 @@ const LoginScreen = () => {
           />
           <Text style={[styles.googleText, { color: theme.text }]}>
             Sign in with Google
-          </Text>
-        </View>
-      </Pressable>
-
-      {/* Facebook Sign-In */}
-      <Pressable
-        style={[styles.oauthButton, { backgroundColor: "#1877F2" }]}
-        onPress={handleFacebookLogin}
-      >
-        <View style={styles.buttonContent}>
-          <Image source={{ uri: facebookIcon }} style={styles.oauthIcon} />
-          <Text style={styles.oauthText}>Sign in with Facebook</Text>
-        </View>
-      </Pressable>
-
-      {/* Apple Sign-In */}
-      <Pressable
-        style={[
-          styles.oauthButton,
-          {
-            backgroundColor: isDarkMode ? "#fff" : "#000",
-          },
-        ]}
-        onPress={handleAppleLogin}
-      >
-        <View style={styles.buttonContent}>
-          <Image
-            source={{ uri: appleIcon }}
-            style={[
-              styles.oauthIcon,
-              { tintColor: isDarkMode ? "#000" : "#fff" },
-            ]}
-            resizeMode="contain"
-          />
-          <Text
-            style={[
-              styles.oauthText,
-              {
-                color: isDarkMode ? "#000" : "#fff",
-              },
-            ]}
-          >
-            Sign in with Apple
           </Text>
         </View>
       </Pressable>
