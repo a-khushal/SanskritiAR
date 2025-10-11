@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "616061704551",
-    "project_id": "sanskritiar-8ca9a",
-    "storage_bucket": "sanskritiar-8ca9a.firebasestorage.app"
+    "project_number": "937053500619",
+    "project_id": "sanskriti-ar",
+    "storage_bucket": "sanskriti-ar.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:616061704551:android:b48e1762c12d51fd7ab7c2",
+        "mobilesdk_app_id": "1:937053500619:android:1d05839ed0f8e6e809d74e",
         "android_client_info": {
           "package_name": "com.SanskritiAR"
         }
       },
       "oauth_client": [
         {
-          "client_id": "616061704551-a91uciacvl8qan83utjdtpbo5risiqi1.apps.googleusercontent.com",
+          "client_id": "937053500619-jb3lhi5kjfa4lg5k6416a8c0s15n862g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.SanskritiAR",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "937053500619-tu5079irsd2bda6ev3i7il13r9ugai5o.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDrrKtiyFk9CqdSCUXGFkK8UpeizYVAZoY"
+          "current_key": "AIzaSyAoJLlrWZSRzlKcz52JFgi0d9m3dV9Hdhg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "616061704551-a91uciacvl8qan83utjdtpbo5risiqi1.apps.googleusercontent.com",
+              "client_id": "937053500619-tu5079irsd2bda6ev3i7il13r9ugai5o.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
